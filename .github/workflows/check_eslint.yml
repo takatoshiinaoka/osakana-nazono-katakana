@@ -1,0 +1,22 @@
+name: Check eslint format.
+on: push
+
+jobs:
+  run_eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Install Dependencies
+        run: |
+          yarn
+
+      - name: Run eslint
+        run: |
+          yarn eslint --ext '.js,.ts' --ignore-path .gitignore .

@@ -1,0 +1,41 @@
+{
+  "name": "react-template",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint:prettier": "prettier --check .",
+    "lintfix:prettier": "prettier --write .",
+    "lint:eslint": "eslint --ext \".js,.ts\" --ignore-path .gitignore .",
+    "lintfix:eslint": "yarn lint:eslint --fix",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "lintfix": "yarn lintfix:prettier && yarn lintfix:eslint"
+  },
+  "dependencies": {
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.12",
+    "@types/react-dom": "18.0.5",
+    "@vitejs/plugin-react": "1.3.2",
+    "eslint": "8.17.0",
+    "prettier": "2.6.2",
+    "typescript": "4.7.3",
+    "vite": "2.9.10"
+  },
+  "license": "MIT",
+  "description": "React app template.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukinissie/react-template.git"
+  },
+  "author": "yukinissie <bigtree2490@outlook.jp>",
+  "bugs": {
+    "url": "https://github.com/yukinissie/react-template/issues"
+  },
+  "homepage": "https://github.com/yukinissie/react-template#readme"
+}

@@ -1,0 +1,22 @@
+name: Check preitter format.
+on: push
+
+jobs:
+  run_prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Install Dependencies
+        run: |
+          yarn
+
+      - name: Run prettier
+        run: |
+          yarn prettier --check .
