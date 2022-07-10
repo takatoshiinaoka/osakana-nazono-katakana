@@ -1,3 +1,6 @@
+init:
+	yarn
+	cd api && yarn
 watch_api:
 	cd api && yarn watch
 run_api:
