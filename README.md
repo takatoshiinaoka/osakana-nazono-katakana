@@ -6,6 +6,8 @@
 2. run make watch_api
 3. run run_app_with_api
 
+番外：make が使えない場合も書かれています。
+
 ## 1. run make init
 
 git clone したらプロジェクトのルートで以下のコマンドを打ちます。
