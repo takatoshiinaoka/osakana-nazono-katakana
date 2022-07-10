@@ -1,0 +1,27 @@
+# Copy from https://github.com/takatoshiinaoka/cosmosdb/blob/main/docker-compose.yaml
+version: '3.1'
+# version: '2'
+
+services:
+  linux-emulator:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+    container_name: azure-cosmos-emulator
+    tty: true
+    ports:
+      - 8081:8081
+      - 10251:10251
+      - 10252:10252
+      - 10253:10253
+      - 10254:10254
+      - 10255:10255
+    environment:
+      - AZURE_COSMOS_EMULATOR_PARTITION_COUNT=10
+      - AZURE_COSMOS_EMULATOR_ENABLE_DATA_PERSISTENCE=true
+      - AZURE_COSMOS_EMULATOR_IP_ADDRESS_OVERRIDE=$ipaddr
+    # cpus: "2.0" # Use this param at v2
+    # mem_limit: 3g # Use this param at v2
+    deploy: # Use these param at v3 & add `–compatibility` when compose up
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 3g
