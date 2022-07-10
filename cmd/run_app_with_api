@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DIR="$(dirname $0)"
+
+"$DIR"/build_react
+
+cd "$DIR"/../
+yarn run swa start dist --api-location api

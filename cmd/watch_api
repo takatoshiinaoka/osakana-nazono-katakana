@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DIR="$(dirname $0)"
+
+cd "$DIR"/../api
+yarn watch

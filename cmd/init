@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DIR="$(dirname $0)"
+
+cd "$DIR"/../
+yarn
+cd "$DIR"/../api/
+yarn
