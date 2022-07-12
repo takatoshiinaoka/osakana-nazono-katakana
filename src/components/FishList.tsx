@@ -20,7 +20,7 @@ interface Props {
 
 export const FishList = (props: Props) => {
   const fishItems = props.fishes.map((fish) => (
-    <li>
+    <li key={fish.id}>
       <p>ID: {fish.id}</p>
       <p>プライマリーキー: {fish.pk}</p>
       <p>分類: {fish.class}</p>
