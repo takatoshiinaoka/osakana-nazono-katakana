@@ -1,24 +1,24 @@
 import { useEffect, useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import { FishList } from './components/FishList'
+import { Fish } from './types/Fish'
 
-const fetchMessage = async (
-  name: String,
-  setMessage: React.Dispatch<React.SetStateAction<string>>
+const fetchFishes = async (
+  setFishes: React.Dispatch<React.SetStateAction<Fish[]>>
 ) => {
-  const res = await fetch(`/api/SampleFunction?name=${name}`)
-  const message = await res.text()
-  setMessage(message)
+  const res = await fetch(`/api/fishes`)
+  const fishes = await res.json()
+  setFishes(fishes)
 }
 
 function App() {
-  const [message, setMessage] = useState('')
+  const [fishes, setFishes] = useState(Array<Fish>)
 
   useEffect(() => {
-    fetchMessage('inaoka', setMessage)
+    fetchFishes(setFishes)
   }, [])
 
-  return <div>{message}</div>
+  return <div><FishList fishes={fishes} /></div>
 }
 
 export default App
