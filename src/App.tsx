@@ -4,7 +4,7 @@ import { FishList } from './components/FishList'
 import { Fish } from './types/Fish'
 
 const fetchFishes = async (
-  setFishes: React.Dispatch<React.SetStateAction<Fish[]>>
+  setFishes: React.Dispatch<React.SetStateAction<Array<Fish>>>
 ) => {
   const res = await fetch(`/api/fishes`)
   const fishes = await res.json()
