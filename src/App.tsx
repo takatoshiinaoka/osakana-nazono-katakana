@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import { FishList } from './components/FishList'
 import { Loading } from './components/Loading'
 import { Fish } from './types/Fish'
