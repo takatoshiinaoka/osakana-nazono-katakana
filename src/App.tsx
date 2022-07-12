@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { FishList } from './components/FishList'
+import { Loading } from './components/Loading'
 import { Fish } from './types/Fish'
 
 const fetchFishes = async (
@@ -21,7 +22,7 @@ function App() {
     fetchFishes(setFishes, setLoading)
   }, [])
 
-  return <div>{loading ? <h1>loading...</h1> : <FishList fishes={fishes} />}</div>
+  return <div>{loading ? <Loading /> : <FishList fishes={fishes} />}</div>
 }
 
 export default App
