@@ -1,5 +1,5 @@
-import { Fishes } from './components/Fishes'
-import { FishesProvider } from './contexts/FishContext'
+import { Fishes } from '@/components/Fishes'
+import { FishesProvider } from '@/contexts/FishContext'
 
 function App() {
   return (

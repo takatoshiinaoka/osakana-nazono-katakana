@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Fish } from './Fish'
+import { Fish } from '@/types/Fish'
 
 export type FishesContextProps = {
   fishes: Array<Fish>

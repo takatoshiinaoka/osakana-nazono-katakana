@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { FishesContext } from '../contexts/FishContext'
-import { FishList } from './FishList'
-import { Loading } from './Loading'
+import { FishesContext } from '@/contexts/FishContext'
+import { FishList } from '@/components/FishList'
+import { Loading } from '@/components/Loading'
 
 export const Fishes = () => {
   const { fishes, loading } = useContext(FishesContext)

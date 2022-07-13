@@ -1,4 +1,4 @@
-import { Fish } from '../types/Fish'
+import { Fish } from '@/types/Fish'
 
 export const fetchFishes = async (
   setFishes: React.Dispatch<React.SetStateAction<Array<Fish>>>,

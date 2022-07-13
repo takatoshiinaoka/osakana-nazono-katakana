@@ -1,4 +1,4 @@
-import { Fish } from '../types/Fish'
+import { Fish } from '@/types/Fish'
 
 interface Props {
   fishes: Array<Fish>

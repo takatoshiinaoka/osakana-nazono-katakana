@@ -1,10 +1,10 @@
 import { createContext, useState, useEffect } from 'react'
-import { fetchFishes } from '../apis/fetchFishes'
-import { Fish } from '../types/Fish'
+import { fetchFishes } from '@/apis/fetchFishes'
+import { Fish } from '@/types/Fish'
 import {
   FishesContextProps,
   FishesContextProviderProps,
-} from '../types/FishesContext'
+} from '@/types/FishesContext'
 
 export const FishesContext = createContext<FishesContextProps>({
   fishes: [],
