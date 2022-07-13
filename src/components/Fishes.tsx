@@ -6,5 +6,9 @@ import { Loading } from './Loading'
 export const Fishes = () => {
   const { fishes, loading } = useContext(FishesContext)
 
-  return <div>{loading ? <Loading /> : <FishList fishes={fishes} />}</div>
+  if (loading) {
+    return <Loading />
+  }
+
+  return <FishList fishes={fishes} />
 }
