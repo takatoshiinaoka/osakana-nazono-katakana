@@ -6,12 +6,12 @@ import { Fish } from '@/types/Fish'
 export const Fishes = () => {
   const { data, isLoading, isError } = useFetch<Array<Fish>>('/api/fishes')
 
-  if (!data || isLoading) {
-    return <Loading />
-  }
-
   if (isError) {
     return <div>エラーが発生しました。。</div>
+  }
+
+  if (!data || isLoading) {
+    return <Loading />
   }
 
   return <FishList fishes={data} />
