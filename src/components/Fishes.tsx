@@ -1,14 +1,18 @@
-import { useContext } from 'react'
-import { FishesContext } from '@/contexts/FishContext'
 import { FishList } from '@/components/FishList'
 import { Loading } from '@/components/Loading'
+import { useFetch } from '@/hooks/useFetch'
+import { Fish } from '@/types/Fish'
 
 export const Fishes = () => {
-  const { fishes, loading } = useContext(FishesContext)
+  const { data, isLoading, isError } = useFetch<Array<Fish>>('/api/fishes')
 
-  if (loading) {
+  if (!data || isLoading) {
     return <Loading />
   }
 
-  return <FishList fishes={fishes} />
+  if (isError) {
+    return <div>エラーが発生しました。。</div>
+  }
+
+  return <FishList fishes={data} />
 }

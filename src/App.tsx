@@ -1,12 +1,7 @@
 import { Fishes } from '@/components/Fishes'
-import { FishesProvider } from '@/contexts/FishContext'
 
 function App() {
-  return (
-    <FishesProvider>
-      <Fishes />
-    </FishesProvider>
-  )
+  return <Fishes />
 }
 
 export default App
