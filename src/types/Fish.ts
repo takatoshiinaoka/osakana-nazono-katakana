@@ -4,10 +4,8 @@ type Class = 'fish' | 'shark' | 'mammalian'
 
 type Name = {
   japanese: string
-  english: {
-    value: string
-    furigana: string
-  }
+  english: string
+  katakana: string
 }
 
 export type Fish = {
