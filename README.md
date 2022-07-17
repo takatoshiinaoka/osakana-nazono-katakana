@@ -5,8 +5,13 @@
 1. run make init
 2. run make watch_api
 3. run run_app_with_api
+4. yarn dev
 
 番外：make が使えない場合も書かれています。
+
+## 0. CosmosDB との接続情報を配置する。
+
+`api/local.settings.json`を作成してください。内容は @yukinissie に聞いてください。
 
 ## 1. run make init
 
@@ -40,6 +45,10 @@ Found 0 errors. Watching for file changes.
 ```sh
 make run_app_with_api
 ```
+
+## 4. yarn dev
+
+普通にフロントエンドの開発をします。
 
 ## 番外 make が使えない場合
 
