@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export const Top = () => {
   return (
     <div>
-      <div>Topコンポーネントをここに置きます</div>
+      <div>Topコンポーネント</div>
       <Link
         to={{
           pathname: `/`,
@@ -14,39 +14,20 @@ export const Top = () => {
       >
         Start
       </Link>
-      <br />
-      <Link
-        to={{
-          pathname: `/`,
-        }}
-        state={{
-          getby: 'question',
-        }}
-      >
-        Quesion
-      </Link>
-      <br />
-      <Link
-        to={{
-          pathname: `/`,
-        }}
-        state={{
-          getby: 'answer',
-        }}
-      >
-        Answer
-      </Link>
-      <br />
-      <Link
-        to={{
-          pathname: `/`,
-        }}
-        state={{
-          getby: '',
-        }}
-      >
-        Default
-      </Link>
+      {import.meta.env.VITE_DEBUG && (
+        <div>
+          <Link
+            to={{
+              pathname: `/`,
+            }}
+            state={{
+              getby: '',
+            }}
+          >
+            デバッグページ（本番では表示されません）
+          </Link>
+        </div>
+      )}
     </div>
   )
 }

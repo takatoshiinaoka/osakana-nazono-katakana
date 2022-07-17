@@ -8,8 +8,19 @@ export const Answer = () => {
         to={{
           pathname: '/',
         }}
+        state={{
+          getby: 'question',
+        }}
       >
-        戻る
+        次の問題
+      </Link>
+      <br />
+      <Link
+        to={{
+          pathname: '/',
+        }}
+      >
+        Topへ戻る
       </Link>
     </div>
   )

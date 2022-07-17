@@ -4,12 +4,17 @@ export const Start = () => {
   return (
     <div>
       <div>Startコンポーネント</div>
+      <Link to={{ pathname: '/' }} state={{ getby: 'derick' }}>
+        もしかして：どりーさん
+      </Link>
+      <br />
       <Link
         to={{
           pathname: '/',
         }}
+        state={{ getby: 'question' }}
       >
-        戻る
+        Start
       </Link>
     </div>
   )

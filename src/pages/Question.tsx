@@ -8,8 +8,11 @@ export const Question = () => {
         to={{
           pathname: '/',
         }}
+        state={{
+          getby: 'answer',
+        }}
       >
-        戻る
+        解答ボタンA
       </Link>
     </div>
   )
