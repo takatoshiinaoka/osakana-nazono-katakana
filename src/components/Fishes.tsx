@@ -8,7 +8,9 @@ import { Fish } from '@/types/Fish'
  * @returns FishList | Loading | HTMLDivElement
  */
 export const Fishes = () => {
-  const { data, isLoading, isError } = useFetch<Array<Fish>>('/api/fishes')
+  const { data, isLoading, isError } = useFetch<Array<Fish>>(
+    `${import.meta.env.VITE_API_HOST}/api/fishes`
+  )
 
   if (isError) {
     return <div>エラーが発生しました。。</div>
