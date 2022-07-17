@@ -72,13 +72,13 @@ export const Question = () => {
   )[Math.floor(Math.random() * filterd_fishes.length)]
   const other_fish2 = filterd_fishes.filter(
     (f) =>
-      f.name_english !== fish.name_english ||
+      f.name_english !== fish.name_english &&
       f.name_english !== other_fish1.name_english
   )[Math.floor(Math.random() * filterd_fishes.length)]
   const other_fish3 = filterd_fishes.filter(
     (f) =>
-      f.name_english !== fish.name_english ||
-      f.name_english !== other_fish1.name_english ||
+      f.name_english !== fish.name_english &&
+      f.name_english !== other_fish1.name_english &&
       f.name_english !== other_fish2.name_english
   )[Math.floor(Math.random() * filterd_fishes.length)]
 
