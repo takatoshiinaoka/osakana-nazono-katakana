@@ -4,6 +4,11 @@ interface Props {
   fishes: Array<Fish>
 }
 
+/**
+ * お魚を一覧表示するためのコンポーネント。使わない。
+ * @param props fishes: Array<Fish>
+ * @returns FishList
+ */
 export const FishList = (props: Props) => {
   const fishItems = props.fishes.map((fish) => (
     <li key={fish.id}>
