@@ -9,22 +9,19 @@ type PK = 'fishes'
 type Class = 'fish' | 'shark' | 'mammalian'
 
 /**
- * 名前です。日本語名、英語名、カタカナを持っています。
- */
-type Name = {
-  japanese: string
-  english: string
-  katakana: string
-}
-
-/**
- * お魚です。idはCosmosDBからの自動採番。pkはPK、classはClass、nameはName、explanationには解説文、imageUrlにはBlob Storgeにある魚の画像URLが入ります。これらの型はCosmosDBのデータ構造に従います。
+ * お魚です。
+ * idはCosmosDBからの自動採番。
+ * pkはPK、classはClass、name_japaneseは日本語名、name_englishは英名、name_katakanaはカタカナ、
+ * explanationには解説文、imageUrlにはBlob Storgeにある魚の画像URLが入ります。
+ * これらの型はCosmosDBのデータ構造に従います。
  */
 export type Fish = {
   id: string
   pk: PK
   class: Class
-  name: Name
+  name_japanese: string
+  name_english: string
+  name_katakana: string
   explanation: string
   imageUrl: string
 }
