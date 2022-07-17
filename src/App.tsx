@@ -1,11 +1,12 @@
 import { useLocation } from 'react-router-dom'
-import { FishesProvider } from '@/contexts/FishesContext'
 import { Top } from '@/pages/Top'
 import { Start } from '@/pages/Start'
 import { Derick } from '@/pages/Derick'
 import { Question } from '@/pages/Question'
 import { Answer } from '@/pages/Answer'
 import { Fishes } from '@/pages/Fishes'
+
+// 参考にしたサイト：https://dev.to/aasthapandey/stop-url-from-changing-using-react-router-81n
 
 type State = {
   state: {
