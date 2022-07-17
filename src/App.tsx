@@ -5,6 +5,7 @@ import { Start } from '@/pages/Start'
 import { Question } from '@/pages/Question'
 import { Answer } from '@/pages/Answer'
 import { Derick } from '@/pages/Derick'
+import { FishesProvider } from './contexts/FishesContext'
 
 type State = {
   state: {
@@ -31,7 +32,7 @@ function App() {
         return <Fishes />
     }
   }
-  return <>{switchTabs()}</>
+  return <FishesProvider>{switchTabs()}</FishesProvider>
 }
 
 export default App

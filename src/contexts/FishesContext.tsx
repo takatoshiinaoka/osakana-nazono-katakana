@@ -1,4 +1,3 @@
-// このコードは使われてないけど参考のため残します。
 import { createContext } from 'react'
 import { Fish } from '@/types/Fish'
 import {
@@ -17,12 +16,14 @@ export const FishesContext = createContext<FishesContextProps>({
 })
 
 /**
- * FishesをグローバルStateに管理するものと勝手に理解しています。使わない。
+ * FishesをグローバルStateに管理するものと勝手に理解しています。一度ロードするだけで使いまわせる想定。
  * @param param0 FishesContextProviderProps
  * @returns React.Context<FishesContextProps>
  */
 export const FishesProvider = ({ children }: FishesContextProviderProps) => {
-  const { data, isLoading, isError } = useFetch<Array<Fish>>('/api/fishes')
+  const { data, isLoading, isError } = useFetch<Array<Fish>>(
+    `${import.meta.env.VITE_API_HOST}/api/fishes`
+  )
 
   return (
     <FishesContext.Provider value={{ data, isLoading, isError }}>
