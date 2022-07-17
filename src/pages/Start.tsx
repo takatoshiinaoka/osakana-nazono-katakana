@@ -12,7 +12,7 @@ export const Start = () => {
         to={{
           pathname: '/',
         }}
-        state={{ getby: 'question' }}
+        state={{ getby: 'question', gameMode: 'marine-world' }}
       >
         Start
       </Link>
