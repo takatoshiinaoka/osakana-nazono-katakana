@@ -15,9 +15,9 @@ export const FishList = (props: Props) => {
       <p>ID: {fish.id}</p>
       <p>プライマリーキー: {fish.pk}</p>
       <p>分類: {fish.class}</p>
-      <p>日本語: {fish.name.japanese}</p>
-      <p>英語: {fish.name.english}</p>
-      <p>カタカナ: {fish.name.katakana}</p>
+      <p>日本語: {fish.name_japanese}</p>
+      <p>英語: {fish.name_english}</p>
+      <p>カタカナ: {fish.name_katakana}</p>
       <p>解説: {fish.explanation}</p>
       <img src={fish.imageUrl} />
     </li>
