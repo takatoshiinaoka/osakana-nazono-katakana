@@ -32,7 +32,7 @@ function App() {
         return <Fishes />
     }
   }
-  return <FishesProvider>{switchTabs()}</FishesProvider>
+  return <>{switchTabs()}</>
 }
 
 export default App
