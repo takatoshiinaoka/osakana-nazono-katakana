@@ -1,11 +1,11 @@
-import { Fishes } from '@/components/Fishes'
 import { useLocation } from 'react-router-dom'
+import { FishesProvider } from '@/contexts/FishesContext'
 import { Top } from '@/pages/Top'
 import { Start } from '@/pages/Start'
+import { Derick } from '@/pages/Derick'
 import { Question } from '@/pages/Question'
 import { Answer } from '@/pages/Answer'
-import { Derick } from '@/pages/Derick'
-import { FishesProvider } from './contexts/FishesContext'
+import { Fishes } from '@/pages/Fishes'
 
 type State = {
   state: {
