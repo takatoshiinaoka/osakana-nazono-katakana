@@ -21,7 +21,7 @@ export type Fish = {
   class: Class
   name_japanese: string
   name_english: string
-  name_katakana: string
+  fake_english: string
   explanation: string
   imageUrl: string
 }
