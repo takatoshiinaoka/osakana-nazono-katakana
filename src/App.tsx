@@ -1,5 +1,9 @@
 import { Fishes } from '@/components/Fishes'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { Top } from '@/pages/Top'
+import { Start } from '@/pages/Start'
+import { Question } from '@/pages/Question'
+import { Answer } from '@/pages/Answer'
 
 type State = {
   state: {
@@ -10,96 +14,16 @@ type State = {
 function App() {
   const { state } = useLocation() as State
   if (state === null) {
-    return (
-      <div>
-        <div>Topコンポーネントをここに置きます</div>
-        <Link
-          to={{
-            pathname: `/`,
-          }}
-          state={{
-            getby: 'start',
-          }}
-        >
-          Start
-        </Link>
-        <br />
-        <Link
-          to={{
-            pathname: `/`,
-          }}
-          state={{
-            getby: 'question',
-          }}
-        >
-          Quesion
-        </Link>
-        <br />
-        <Link
-          to={{
-            pathname: `/`,
-          }}
-          state={{
-            getby: 'answer',
-          }}
-        >
-          Answer
-        </Link>
-        <br />
-        <Link
-          to={{
-            pathname: `/`,
-          }}
-          state={{
-            getby: '',
-          }}
-        >
-          Default
-        </Link>
-      </div>
-    )
+    return <Top />
   }
   const switchTabs = () => {
     switch (state.getby) {
       case 'start':
-        return (
-          <div>
-            <div>Startコンポーネント</div>
-            <Link
-              to={{
-                pathname: '/',
-              }}
-            >
-              戻る
-            </Link>
-          </div>
-        )
+        return <Start />
       case 'question':
-        return (
-          <div>
-            <div>Questionコンポーネント</div>
-            <Link
-              to={{
-                pathname: '/',
-              }}
-            >
-              戻る
-            </Link>
-          </div>
-        )
+        return <Question />
       case 'answer':
-        return (
-          <div>
-            <div>Answerコンポーネント</div>
-            <Link
-              to={{
-                pathname: '/',
-              }}
-            >
-              戻る
-            </Link>
-          </div>
-        )
+        return <Answer />
       default:
         return <Fishes />
     }
