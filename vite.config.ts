@@ -8,5 +8,12 @@ export default defineConfig({
       '@': `${__dirname}/src`,
     },
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxImportSource: '@emotion/react',
+      babel: {
+        plugins: ['@emotion/babel-plugin'],
+      },
+    }),
+  ],
 })

@@ -14,12 +14,17 @@
     "lintfix": "yarn lintfix:prettier && yarn lintfix:eslint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.2.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@azure/static-web-apps-cli": "^1.0.2",
+    "@emotion/babel-plugin": "^11.9.2",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
