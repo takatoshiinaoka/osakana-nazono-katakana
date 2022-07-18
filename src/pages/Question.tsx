@@ -114,7 +114,7 @@ export const Question = () => {
                 textAlign: 'center',
               }}
             >
-              {fish.name_japanese}の英名は？
+              <b>{fish.name_japanese}</b>の英名は？
             </Box>
             <ButtonGroup>
               <VStack gap={2}>
