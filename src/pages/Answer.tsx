@@ -1,5 +1,6 @@
 import { Fish } from '@/types/Fish'
 import { GameMode } from '@/types/GameMode'
+import { Box, Button, VStack, Text, ButtonGroup } from '@chakra-ui/react'
 import { Link, useLocation } from 'react-router-dom'
 
 type AnswerLocationState = {
@@ -16,33 +17,52 @@ export const Answer = () => {
 
   return (
     <div>
-      <img src={state.fish.imageUrl} width={400} />
-      {result ? <div>正解</div> : <div>不正解</div>}
-      <div>
-        {state.fish.name_japanese}は{state.fish.name_english}です。
-      </div>
-      <div>
-        <div>{state.fish.explanation}</div>
-      </div>
-      <Link
-        to={{
-          pathname: '/',
-        }}
-        state={{
-          getby: 'question',
-          gameMode: state.gameMode,
-        }}
-      >
-        次の問題へ
-      </Link>
-      <br />
-      <Link
-        to={{
-          pathname: '/',
-        }}
-      >
-        Topへ戻る
-      </Link>
+      <VStack justify="center" height="100vh">
+        <Box height="500px" width="90%">
+          <VStack justify="center" height="100%" spacing={10}>
+            <img src={state.fish.imageUrl} width={400} />
+            <Box bg="white" css={{ padding: 15, borderRadius: 10 }}>
+              <VStack gap={1}>
+                {result ? <div>⭕️正解⭕️</div> : <div>❌不正解❌</div>}
+                <div>
+                  <b>{state.fish.name_japanese}</b>の英名は
+                  <b>{state.fish.name_english}</b>
+                  です。
+                </div>
+                <div>
+                  <div>{state.fish.explanation}</div>
+                </div>
+              </VStack>
+            </Box>
+            <ButtonGroup>
+              <VStack gap={2}>
+                <Button size="lg" css={{ width: '100%' }}>
+                  <Link
+                    to={{
+                      pathname: '/',
+                    }}
+                    state={{
+                      getby: 'question',
+                      gameMode: state.gameMode,
+                    }}
+                  >
+                    次の問題へ
+                  </Link>
+                </Button>
+                <Button size="lg" css={{ width: '100%' }}>
+                  <Link
+                    to={{
+                      pathname: '/',
+                    }}
+                  >
+                    Topへ戻る
+                  </Link>
+                </Button>
+              </VStack>
+            </ButtonGroup>
+          </VStack>
+        </Box>
+      </VStack>
     </div>
   )
 }
