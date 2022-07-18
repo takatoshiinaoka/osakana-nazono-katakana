@@ -104,13 +104,13 @@ export const Question = () => {
       <VStack justify="center" height="100vh">
         <Box height="500px" width="90%">
           <VStack justify="center" height="100%" spacing={10}>
-            <img src={fish.imageUrl} width="100%" />
+            <img src={fish.imageUrl} width={400} />
             <Box
               bgColor="white"
               css={{
                 borderRadius: '5px',
                 padding: 10,
-                width: '100%',
+                width: '350px',
                 textAlign: 'center',
               }}
             >
