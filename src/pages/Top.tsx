@@ -1,4 +1,4 @@
-import { Box, Button, VStack } from '@chakra-ui/react'
+import { Box, Button, Text, VStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 export const Top = () => {
@@ -11,8 +11,8 @@ export const Top = () => {
           width="90%"
           css={{ borderRadius: '10px' }}
         >
-          <VStack justify="center" height="100%" spacing={20}>
-            <div>御魚 なぞの カタカナ</div>
+          <VStack justify="center" height="100%" spacing={10}>
+            <Text fontSize="xl">御魚 なぞの カタカナ</Text>
             <Button size="lg">
               <Link
                 to={{
