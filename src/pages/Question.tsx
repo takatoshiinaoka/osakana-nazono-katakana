@@ -41,7 +41,7 @@ export const Question = () => {
   const { data } = useContext(FishesContext)
   const { state } = useLocation() as QuestionLocationState
   const gameMode = state.gameMode
-  console.log(gameMode)
+
   /**
    * TypeScriptのエラー避け
    */
@@ -120,22 +120,23 @@ export const Question = () => {
               <VStack gap={2}>
                 {choices.map((c, index) => {
                   return (
-                    <Button key={index} css={{ width: '100%' }}>
-                      {choiceKeys[index]}{' '}
-                      <Link
-                        to={{
-                          pathname: '/',
-                        }}
-                        state={{
-                          getby: 'answer',
-                          result: isCurrected(fish.name_english, c),
-                          gameMode: state.gameMode,
-                          fish: fish,
-                        }}
-                      >
-                        {c}
-                      </Link>
-                    </Button>
+                    <Link
+                      to={{
+                        pathname: '/',
+                      }}
+                      state={{
+                        getby: 'answer',
+                        result: isCurrected(fish.name_english, c),
+                        gameMode: state.gameMode,
+                        fish: fish,
+                      }}
+                      key={index}
+                      css={{ width: '100%' }}
+                    >
+                      <Button css={{ width: '100%' }}>
+                        {choiceKeys[index]} {c}
+                      </Button>
+                    </Link>
                   )
                 })}
               </VStack>

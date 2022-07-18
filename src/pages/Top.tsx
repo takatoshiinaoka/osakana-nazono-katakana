@@ -14,18 +14,16 @@ export const Top = () => {
           <VStack justify="center" height="100%" spacing={5}>
             <Text fontSize="xl">御魚 なぞの カタカナ</Text>
             <img src={osakanaImage} width={150} />
-            <Button size="lg">
-              <Link
-                to={{
-                  pathname: `/`,
-                }}
-                state={{
-                  getby: 'start',
-                }}
-              >
-                Start
-              </Link>
-            </Button>
+            <Link
+              to={{
+                pathname: `/`,
+              }}
+              state={{
+                getby: 'start',
+              }}
+            >
+              <Button size="lg">Start</Button>
+            </Link>
           </VStack>
         </Box>
       </VStack>

@@ -36,28 +36,28 @@ export const Answer = () => {
             </Box>
             <ButtonGroup>
               <VStack gap={2}>
-                <Button size="lg" css={{ width: '100%' }}>
-                  <Link
-                    to={{
-                      pathname: '/',
-                    }}
-                    state={{
-                      getby: 'question',
-                      gameMode: state.gameMode,
-                    }}
-                  >
+                <Link
+                  to={{
+                    pathname: '/',
+                  }}
+                  state={{
+                    getby: 'question',
+                    gameMode: state.gameMode,
+                  }}
+                >
+                  <Button size="lg" css={{ width: '100%' }}>
                     次の問題へ
-                  </Link>
-                </Button>
-                <Button size="lg" css={{ width: '100%' }}>
-                  <Link
-                    to={{
-                      pathname: '/',
-                    }}
-                  >
+                  </Button>
+                </Link>
+                <Link
+                  to={{
+                    pathname: '/',
+                  }}
+                >
+                  <Button size="lg" css={{ width: '100%' }}>
                     Topへ戻る
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </VStack>
             </ButtonGroup>
           </VStack>
