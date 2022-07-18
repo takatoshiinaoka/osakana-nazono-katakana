@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from '@/App'
-import '@/index.css'
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom'
 import { FishesProvider } from '@/contexts/FishesContext'
 import { ChakraProvider } from '@chakra-ui/react'
