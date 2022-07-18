@@ -1,6 +1,6 @@
 import { Box, Button, Text, VStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-
+import osakanaImage from '../favicon.png'
 export const Top = () => {
   return (
     <div>
@@ -11,8 +11,9 @@ export const Top = () => {
           width="90%"
           css={{ borderRadius: '10px' }}
         >
-          <VStack justify="center" height="100%" spacing={10}>
+          <VStack justify="center" height="100%" spacing={5}>
             <Text fontSize="xl">御魚 なぞの カタカナ</Text>
+            <img src={osakanaImage} width={150} />
             <Button size="lg">
               <Link
                 to={{
