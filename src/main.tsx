@@ -3,18 +3,27 @@ import ReactDOM from 'react-dom/client'
 import App from '@/App'
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom'
 import { FishesProvider } from '@/contexts/FishesContext'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider } from '@chakra-ui/react'
+import seaImage from './static/sea.jpg'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <FishesProvider>
-      <ChakraProvider>
+    <ChakraProvider>
+      <FishesProvider>
         <Router>
-          <Routes>
-            <Route path="/" element={<App />} />
-          </Routes>
+          <Box
+            bgImage={seaImage}
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+            height="100vh"
+          >
+            <Routes>
+              <Route path="/" element={<App />} />
+            </Routes>
+          </Box>
         </Router>
-      </ChakraProvider>
-    </FishesProvider>
+      </FishesProvider>
+    </ChakraProvider>
   </React.StrictMode>
 )
