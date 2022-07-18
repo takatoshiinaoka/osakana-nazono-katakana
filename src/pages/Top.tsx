@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export const Top = () => {
   return (
     <div>
-      <div>Topコンポーネント</div>
+      <div>御魚 なぞの カタカナ</div>
       <Link
         to={{
           pathname: `/`,
