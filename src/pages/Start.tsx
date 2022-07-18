@@ -12,21 +12,17 @@ export const Start = () => {
           css={{ borderRadius: '10px' }}
         >
           <VStack justify="center" height="100%" spacing={10}>
-            <Button size="lg">
-              <Link to={{ pathname: '/' }} state={{ getby: 'derick' }}>
-                どりーさん専用
-              </Link>
-            </Button>
-            <Button size="lg">
-              <Link
-                to={{
-                  pathname: '/',
-                }}
-                state={{ getby: 'question', gameMode: 'marine-world' }}
-              >
-                クイズスタート
-              </Link>
-            </Button>
+            <Link to={{ pathname: '/' }} state={{ getby: 'derick' }}>
+              <Button size="lg">どりーさん専用</Button>
+            </Link>
+            <Link
+              to={{
+                pathname: '/',
+              }}
+              state={{ getby: 'question', gameMode: 'marine-world' }}
+            >
+              <Button size="lg">クイズスタート</Button>
+            </Link>
           </VStack>
         </Box>
       </VStack>

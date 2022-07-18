@@ -13,22 +13,18 @@ export const Derick = () => {
         >
           <VStack justify="center" height="100%" spacing={10}>
             <div>どりーさん専用ページ</div>
-            <Button size="lg">
-              <Link
-                to={{ pathname: '/' }}
-                state={{ getby: 'question', gameMode: 'shark' }}
-              >
-                🦈サメモード🦈
-              </Link>
-            </Button>
-            <Button size="lg">
-              <Link
-                to={{ pathname: '/' }}
-                state={{ getby: 'question', gameMode: 'marine-world' }}
-              >
-                🐬マリンワールドモード🐧
-              </Link>
-            </Button>
+            <Link
+              to={{ pathname: '/' }}
+              state={{ getby: 'question', gameMode: 'shark' }}
+            >
+              <Button size="lg">🦈サメモード🦈</Button>
+            </Link>
+            <Link
+              to={{ pathname: '/' }}
+              state={{ getby: 'question', gameMode: 'marine-world' }}
+            >
+              <Button size="lg">🐬マリンワールドモード🐧</Button>
+            </Link>
           </VStack>
         </Box>
       </VStack>
