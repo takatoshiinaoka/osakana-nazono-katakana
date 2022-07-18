@@ -1,6 +1,7 @@
 import { FishesContext } from '@/contexts/FishesContext'
 import { Fish } from '@/types/Fish'
 import { GameMode } from '@/types/GameMode'
+import { Box, Button, ButtonGroup, VStack } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -27,6 +28,8 @@ type QuestionLocationState = {
     gameMode: GameMode
   }
 }
+
+const choiceKeys = ['A.', 'B.', 'C.', 'D.']
 
 /**
  * お魚データを取得してランダムに１つの魚データから問題文を計算する。
@@ -98,28 +101,48 @@ export const Question = () => {
 
   return (
     <div>
-      <p>{fish.name_japanese}の英名は？</p>
-      <ol>
-        {choices.map((c, index) => {
-          return (
-            <li key={index}>
-              <Link
-                to={{
-                  pathname: '/',
-                }}
-                state={{
-                  getby: 'answer',
-                  result: isCurrected(fish.name_english, c),
-                  gameMode: state.gameMode,
-                  fish: fish,
-                }}
-              >
-                {c}
-              </Link>
-            </li>
-          )
-        })}
-      </ol>
+      <VStack justify="center" height="100vh">
+        <Box height="500px" width="90%">
+          <VStack justify="center" height="100%" spacing={10}>
+            <img src={fish.imageUrl} width="100%" />
+            <Box
+              bgColor="white"
+              css={{
+                borderRadius: '5px',
+                padding: 10,
+                width: '100%',
+                textAlign: 'center',
+              }}
+            >
+              {fish.name_japanese}の英名は？
+            </Box>
+            <ButtonGroup>
+              <VStack gap={2}>
+                {choices.map((c, index) => {
+                  return (
+                    <Button key={index} css={{ width: '100%' }}>
+                      {choiceKeys[index]}{' '}
+                      <Link
+                        to={{
+                          pathname: '/',
+                        }}
+                        state={{
+                          getby: 'answer',
+                          result: isCurrected(fish.name_english, c),
+                          gameMode: state.gameMode,
+                          fish: fish,
+                        }}
+                      >
+                        {c}
+                      </Link>
+                    </Button>
+                  )
+                })}
+              </VStack>
+            </ButtonGroup>
+          </VStack>
+        </Box>
+      </VStack>
     </div>
   )
 }
