@@ -1,7 +1,6 @@
 {
-  "name": "react-template",
-  "version": "0.1.0",
-  "type": "module",
+  "name": "osakana-nazono-katakana",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -39,16 +38,6 @@
   "engines": {
     "node": "16.x"
   },
-  "license": "MIT",
-  "description": "React app template.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yukinissie/react-template.git"
-  },
-  "author": "yukinissie <bigtree2490@outlook.jp>",
-  "bugs": {
-    "url": "https://github.com/yukinissie/react-template/issues"
-  },
-  "homepage": "https://github.com/yukinissie/react-template#readme"
+  "license": "UNLICENSE",
+  "main": "index.js"
 }
