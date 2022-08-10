@@ -38,6 +38,6 @@
   "engines": {
     "node": "16.x"
   },
-  "license": "UNLICENSE",
-  "main": "index.js"
+  "license": "UNLICENSED",
+  "private": true
 }
