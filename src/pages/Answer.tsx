@@ -1,6 +1,6 @@
 import { Fish } from '@/types/Fish'
 import { GameMode } from '@/types/GameMode'
-import { Box, Button, VStack, Text, ButtonGroup } from '@chakra-ui/react'
+import { Box, Button, VStack, ButtonGroup } from '@chakra-ui/react'
 import { Link, useLocation } from 'react-router-dom'
 
 type AnswerLocationState = {
