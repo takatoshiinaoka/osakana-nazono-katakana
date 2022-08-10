@@ -54,6 +54,9 @@ yarn dev で開発サーバーを起動します。
 yarn dev
 ```
 
+React: http://localhost:5173
+API: http://localhost:7071
+
 ## 番外 make が使えない場合
 
 プロジェクトのルートで以下を実行します。
@@ -75,3 +78,6 @@ yarn dev で開発サーバーを起動します。
 ```
 yarn dev
 ```
+
+React: http://localhost:5173
+API: http://localhost:7071
