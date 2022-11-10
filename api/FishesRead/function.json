@@ -12,7 +12,7 @@
       "name": "documents",
       "type": "cosmosDB",
       "direction": "in",
-      "databaseName": "OsakanaLIst",
+      "databaseName": "OsakanaList",
       "collectionName": "Fishes",
       "sqlQuery": "SELECT * from c WHERE c.pk = 'fishes'",
       "connectionStringSetting": "CosmosDBConnection"
