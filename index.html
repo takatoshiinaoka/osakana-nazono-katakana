@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/static/favicon.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>御魚 なぞの カタカナ</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('./serviceWorker.js')
+            .then((reg) => console.log('サービスワーカーの登録成功', reg.scope))
+            .catch((err) => console.log('サービスワーカーの登録失敗', err))
+        })
+      }
+    </script>
   </body>
 </html>
