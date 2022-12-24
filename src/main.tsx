@@ -5,6 +5,7 @@ import { MemoryRouter as Router, Routes, Route } from 'react-router-dom'
 import { FishesProvider } from '@/contexts/FishesContext'
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import seaImage from '~/sea.jpg'
+import { registerSW } from 'virtual:pwa-register'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -27,3 +28,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </ChakraProvider>
   </React.StrictMode>
 )
+
+// サービスワーカーを登録
+registerSW()
