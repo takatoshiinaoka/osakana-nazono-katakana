@@ -1,5 +1,7 @@
 # osakana-nazono-katakana
 
+hogehgoe
+
 ## Installation
 
 1. run make init
