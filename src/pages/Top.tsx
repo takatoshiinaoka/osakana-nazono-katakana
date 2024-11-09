@@ -1,6 +1,6 @@
 import { Box, Button, Text, VStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import osakanaImage from '~/favicon.png'
+import osakanaImage from '~/favicon.ico'
 
 export const Top = () => {
   return (
