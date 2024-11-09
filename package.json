@@ -1,6 +1,6 @@
 {
   "name": "osakana-nazono-katakana",
-  "version": "1.0.0",
+  "version": "1.2.3",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -23,7 +23,7 @@
     "web-vitals": "^3.1.0"
   },
   "devDependencies": {
-    "@azure/static-web-apps-cli": "1.0.2",
+    "@azure/static-web-apps-cli": "^2.0.1",
     "@emotion/babel-plugin": "11.10.0",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
@@ -38,7 +38,7 @@
     "vite-plugin-pwa": "^0.13.3"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "license": "UNLICENSED",
   "private": true

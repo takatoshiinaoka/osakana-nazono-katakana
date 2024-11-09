@@ -4,6 +4,6 @@
       "AzureWebJobsStorage": "UseDevelopmentStorage=true",
       "FUNCTIONS_WORKER_RUNTIME": "node",
       "NODE_TLS_REJECT_UNAUTHORIZED": "0",
-      "CosmosDBConnection": ""
+      "CosmosDBConnection": "AccountEndpoint={ACCOUNT_ENDPOINT};AccountKey={ACCOUNT_KEY};"
     }
   }
