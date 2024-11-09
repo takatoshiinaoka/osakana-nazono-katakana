@@ -20,7 +20,6 @@ export default defineConfig({
     VitePWA({
       includeAssets: [
         'offline.html',
-        'favicon.svg',
         'favicon.ico',
         'robots.txt',
         'apple-touch-icon.png',
